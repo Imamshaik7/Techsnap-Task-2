@@ -1,0 +1,481 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: rgb(245, 245, 245);
+}
+
+/*body => 1 - 2 - 3 */
+.header {
+    display: block;
+    position: fixed;
+    background: white;
+    height: 55px;
+    width: 100%;
+    padding: 5px;
+    box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.5);
+    display: flex;
+    z-index: 10;
+}
+
+.menubar-toggle .bar {
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background: gray;
+}
+
+.left-header {
+    display: flex;
+    justify-content: start;
+    flex-basis: 50%;
+    align-items: center;
+}
+
+.logo {
+    font-size: 45px;
+    margin: 0 10px 0 40px;
+}
+
+.search {
+    display: flex;
+    width: 70%;
+    padding: 5px;
+    margin: 15px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+.search input {
+    height: 100%;
+    width: 100%;
+    padding: 5px;
+    font-size: medium;
+    border: none;
+}
+
+.search i {
+    font-size: 25px;
+    margin: auto 5px;
+}
+
+.right-header {
+    display: flex;
+    justify-content: end;
+    flex-basis: 50%;
+    align-items: center;
+}
+
+.right-header i {
+    display: none;
+}
+
+.right-header .Login-btn {
+    padding: 10px;
+    margin: 0 10px;
+    font-size: 18px;
+    border: none;
+    color: gray;
+    background-color: white;
+}
+
+.right-header .Create-acc-btn {
+    padding: 10px;
+    width: 150px;
+    font-size: 16px;
+    font-weight: 700;
+    border: 1.5px solid rgb(7, 86, 255);
+    background: white;
+    color: rgb(7, 86, 255);
+    border-radius: 10px;
+    margin: 0 30px 0 20px;
+}
+
+.footer {
+    background: rgb(229, 229, 229);
+    text-align: center;
+    margin-top: 20px;
+    padding: 50px;
+    font-size: 14px;
+    color: rgb(65, 63, 63);
+}
+
+.footer p {
+    margin: 10px;
+}
+
+.footer p a {
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.footer i {
+    font-size: x-large;
+    color: rgb(33, 176, 164);
+}
+
+/* content-conatiner => 2 => 2.1 - 2.2 - 2.3 */
+
+.content {
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 10% 60% 30%;
+}
+
+.left {
+    position: sticky;
+    top: 30px;
+    align-self: flex-start;
+    padding: 50px 10px;
+}
+
+.left .icons-c {
+    width: 50%;
+    margin: auto;
+}
+
+.left .icons-c i {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    padding: 18px 0;
+    color: rgb(90, 88, 88);
+}
+
+.left .icons-c i span {
+    font-size: small;
+    margin-top: 10px;
+}
+
+.right-side {
+    flex-basis: 40%;
+    position: sticky;
+    top: 30px;
+    align-self: flex-start;
+    padding: 50px 10px;
+    margin: 0 15px;
+}
+
+.right-side .user-card {
+    background: white;
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.right-side .user-card .dp {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 10px;
+}
+
+.right-side .user-card .dp img {
+    width: 15%;
+    display: block;
+    margin: 0 10px;
+    border-radius: 50%;
+}
+
+.right-side .user-card .dp h1 {
+    font-size: x-large;
+}
+
+.right-side .user-card button {
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    font-size: large;
+    font-weight: 600;
+    margin: 10px 0;
+    background-color: #3b49de;
+}
+
+.right-side .user-card p {
+    margin: 10px 0;
+    font-size: large;
+    color: rgb(37, 35, 35);
+}
+
+.right-side .card-more-blogs {
+    background: white;
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.right-side .card-more-blogs h1 {
+    font-size: x-large;
+    margin: 10px;
+}
+
+.right-side .card-more-blogs h1 span {
+    color: #3b49de;
+}
+
+.right-side .card-more-blogs .row {
+    margin: 20px 10px;
+}
+
+.right-side .card-more-blogs .row h2 {
+    font-size: large;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: rgb(85, 84, 84);
+}
+
+/* main-content => 2.2 => 2.2.1 - 2.2.2 */
+.main-content {
+    margin-top: 80px;
+    flex-basis: 40%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content .blog-image {
+    display: block;
+    border-radius: 10px 10px 0 0;
+}
+
+.content-blog {
+    border-radius: 0 0 10px 10px;
+    background: white;
+    padding: 30px 60px;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.author img {
+    display: block;
+    border-radius: 50%;
+    width: 6%;
+    margin-right: 20px;
+}
+
+.author h1 {
+    font-size: large;
+}
+
+.author p {
+    font-size: small;
+}
+
+.content-blog .blog-title {
+    margin-bottom: 30px;
+}
+
+.content-blog .blog-title h1 {
+    font-size: 50px;
+    font-weight: 900;
+}
+
+.content-blog .blog-title p {
+    font-size: large;
+    color: rgb(71, 69, 69);
+}
+
+.content-blog .series_card {
+    width: 85%;
+    border: 1px solid rgb(190, 184, 184);
+    border-radius: 10px;
+    background: #fafafa;
+    margin: 30px auto;
+    padding: 10px 20px;
+}
+
+.content-blog .series_card h1 {
+    color: #3b49de;
+    font-size: larger;
+}
+
+.content-blog .series_card .row {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.content-blog .series_card .row span {
+    width: 30px;
+    height: 30px;
+    padding: 3px;
+    border-radius: 50%;
+    background: rgb(202, 201, 201);
+    text-align: center;
+    color: black;
+    font-weight: 300;
+}
+
+.content-blog .series_card .row h1 {
+    font-weight: 300;
+    padding: 5px;
+    margin-left: 10px;
+    color: black;
+}
+
+.content-blog .blog-info p {
+    font-size: 20px;
+    color: rgb(65, 62, 62);
+    margin: 20px 0;
+}
+
+.content-blog .blog-info iframe {
+    margin: 10px 0;
+}
+
+.content-blog .blog-info img {
+    display: block;
+    width: 60%;
+    margin: 10px auto;
+    border-radius: 10px;
+}
+
+.content-blog .blog-discussion>div {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.content-blog .blog-discussion .row1 {
+    justify-content: space-between;
+}
+
+.content-blog .blog-discussion .row1 button {
+    padding: 5px 20px;
+    border: 2px solid rgb(180, 176, 176);
+    border-radius: 5px;
+    font-size: large;
+}
+
+.content-blog .blog-discussion .row2 {
+    justify-content: center;
+}
+
+.content-blog .blog-discussion .row2 i {
+    margin: 10px;
+    font-size: 40px;
+}
+
+.content-blog .blog-discussion .row2 textarea {
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+}
+
+.content-blog .blog-discussion .row3 {
+    justify-content: center;
+    padding: 10px;
+    margin-bottom: 0;
+}
+
+.read-next {
+    background: white;
+    margin: 20px 0;
+    border-radius: 10px;
+    padding: 20px 60px;
+}
+
+.main-content .read-next .author {
+    width: 100%;
+    margin: 20px 0;
+}
+
+.main-content .read-next .author img {
+    width: 9%;
+}
+
+.main-content .read-next .author div h1 {
+    font-size: x-large;
+    color: rgb(73, 70, 70);
+    margin-bottom: 5px;
+}
+
+.main-content .read-next .author div p {
+    font-size: medium;
+    color: gray;
+}
+
+/* Mobile Responsive */
+
+@media screen and (max-width: 1023px) {
+    .content-container {
+        grid-template-columns: 10% 88%;
+    }
+
+    .right-side {
+        grid-column: 2;
+        margin: 10px 0;
+        padding: 10px 0;
+    }
+
+    .logo {
+        margin: 0 25px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #mobile-menu {
+        margin: 10px;
+    }
+
+    .menubar-toggle .bar {
+        display: block;
+        cursor: pointer;
+    }
+
+    .menubar-toggle:hover {
+        cursor: pointer;
+    }
+
+    .logo {
+        margin: 0 10px;
+    }
+
+    .left {
+        display: none;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .main-content {
+        margin-top: 60px;
+    }
+
+    .search {
+        display: none;
+    }
+
+    .right-header i {
+        font-size: 25px;
+
+        display: block;
+    }
+
+    .right-header .btn-Login {
+        display: none;
+    }
+}
